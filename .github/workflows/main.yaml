@@ -1,0 +1,17 @@
+name: Nome do Workflow # ← nome exibido na interface
+on: # ← evento que dispara o workflow
+push:
+branches: [ "main" ]
+pull_request:
+branches: [ "main" ]
+
+jobs: # ← lista de jobs
+  nome-do-job: # ← identificador do job
+    runs-on: ubuntu-latest # ← sistema operacional do runner
+
+    steps: # ← lista de passos
+      - name: Descrição do passo
+        uses: actions/checkout@v4 # ← usa uma action pronta
+
+      - name: Outro passo
+        run: echo "Hello, CI/CD!" # ← executa comando shell
