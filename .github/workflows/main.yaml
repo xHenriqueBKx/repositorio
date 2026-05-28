@@ -1,9 +1,9 @@
 name: Nome do Workflow # ← nome exibido na interface
 on: # ← evento que dispara o workflow
-push:
-branches: [ "main" ]
-pull_request:
-branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs: # ← lista de jobs
   nome-do-job: # ← identificador do job
